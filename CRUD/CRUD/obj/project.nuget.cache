@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ICnnPd5HqRXneLWf0IKTl8r0yRu3mJEtMAw6XFnlxu0h9tNVI2qAc5rXL9KRTozcBoZPbCcOkbWYmBRxhUgZoQ==",
+  "dgSpecHash": "ybN2tQ5SLcj/j9zQSg+mRSVe2qX6Q2UyldTiDwUY1PUSQhbluYYiYX+vMeGbuvUE6oH9O7+6VtBjrRmwCXJsIA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\hulds\\source\\repos\\CRUD\\CRUD\\CRUD.csproj",
+  "projectFilePath": "C:\\Users\\hulds\\Desktop\\crud\\CRUDConsole\\CRUD\\CRUD\\CRUD.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\hulds\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\hulds\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",

@@ -476,11 +476,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\hulds\\source\\repos\\CRUD\\CRUD\\CRUD.csproj",
+      "projectUniqueName": "C:\\Users\\hulds\\Desktop\\crud\\CRUDConsole\\CRUD\\CRUD\\CRUD.csproj",
       "projectName": "CRUD",
-      "projectPath": "C:\\Users\\hulds\\source\\repos\\CRUD\\CRUD\\CRUD.csproj",
+      "projectPath": "C:\\Users\\hulds\\Desktop\\crud\\CRUDConsole\\CRUD\\CRUD\\CRUD.csproj",
       "packagesPath": "C:\\Users\\hulds\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\hulds\\source\\repos\\CRUD\\CRUD\\obj\\",
+      "outputPath": "C:\\Users\\hulds\\Desktop\\crud\\CRUDConsole\\CRUD\\CRUD\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
