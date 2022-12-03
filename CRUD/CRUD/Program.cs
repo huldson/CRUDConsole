@@ -34,13 +34,7 @@ namespace CRUD
                         string nome = Console.ReadLine();
                         Console.Write("imoveis: ");
                         int imoveis = int.Parse(Console.ReadLine());
-                        banco.salvarBanco(tamanho, nome, imoveis);
-                        //conexao.Open();
-                        //string stringDeSalvar = $"INSERT INTO dbo.cliente (id, nome, imoveis) VALUES (" + tamanho + ",'" + nome + "' ," + imoveis + " )";
-                        //SqlCommand comandoDeSalvar = new SqlCommand(stringDeSalvar, conexao);
-                        //comandoDeSalvar.CommandType = CommandType.Text;
-                        //int valor = comandoDeSalvar.ExecuteNonQuery();
-                        //conexao.Close();
+                        banco.SalvarBanco(tamanho, nome, imoveis);
                     }
                     catch (Exception ex)
                     {
@@ -57,13 +51,7 @@ namespace CRUD
                         int id = int.Parse(Console.ReadLine());
                         Console.Write("nome: ");
                         string nome = Console.ReadLine();
-
-                        conexao.Open();
-                        string stringUpdate = "UPDATE dbo.cliente SET nome = '" + nome + "' WHERE id=" + id;
-                        SqlCommand comandoUpadate = new SqlCommand(stringUpdate, conexao);
-                        comandoUpadate.CommandType = CommandType.Text;
-                        comandoUpadate.ExecuteNonQuery();
-                        conexao.Close();
+                         banco.AlterarBanco(id, nome);                      
                     }
                     catch (Exception ex)
                     {
@@ -76,12 +64,7 @@ namespace CRUD
                     {
                         Console.Write("id da conta que deseja deletar: ");
                         int id = int.Parse(Console.ReadLine());
-                        conexao.Open();
-                        string stringDeletar = "DELETE FROM dbo.cliente WHERE id=" + id;
-                        SqlCommand comandoDeletar = new SqlCommand(stringDeletar, conexao);
-                        comandoDeletar.CommandType = CommandType.Text;
-                        comandoDeletar.ExecuteNonQuery();
-                        conexao.Close();
+                        banco.DeletarBanco(id);
                     }
                     catch (Exception ex)
                     {
@@ -90,31 +73,18 @@ namespace CRUD
                 }
                 else if (operacao == "exibir") {
                     try
-                    {   conexao.Open();
-                        Console.WriteLine("exibir todos os dados:");
-                        string stringDeExibicao = "select * FROM dbo.cliente";
-                        SqlCommand comandoExibicao = new SqlCommand(stringDeExibicao, conexao);
-                        comandoExibicao.CommandType = CommandType.Text;
-                        SqlDataReader retornoExibicao = comandoExibicao.ExecuteReader();
-                        while (retornoExibicao.Read())
-                        {
-                            Cliente cliente = new Cliente(Int32.Parse(retornoExibicao[0].ToString()), retornoExibicao[1].ToString(), Int32.Parse(retornoExibicao[2].ToString()));
-                            Console.Write(cliente+"\n\n\n");
-                            
-                        }
-                        conexao.Close();
+                    {   
+                         banco.Exibir();
 
                     }
                     catch (Exception ex)
                     {
-                        Console.WriteLine();
+                        Console.WriteLine(ex);
                     }
-
                 }
                 else if (operacao=="sair") {
                     sair = false;                
-                }            
-                
+                }                            
             }
             
         }
